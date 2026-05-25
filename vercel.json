@@ -3,14 +3,14 @@
   "installCommand": "npm --prefix frontend install && pip install -r requirements.txt",
   "outputDirectory": "frontend/dist",
   "functions": {
-    "app.py": {
+    "api/index.py": {
       "excludeFiles": "{frontend/node_modules/**,frontend/dist/**,backend/.venv/**,backend/test_api.py,**/__pycache__/**,**/*.pyc}"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/app.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/((?!api/.*).*)",
