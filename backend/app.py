@@ -7,8 +7,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from werkzeug.security import check_password_hash
 
-from database import create_user, find_user_by_username, init_db, list_users
-
+try:
+    from .database import create_user, find_user_by_username, init_db, list_users
+except ImportError:
+    from database import create_user, find_user_by_username, init_db, list_users
 
 app = Flask(__name__)
 CORS(app)
