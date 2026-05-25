@@ -2,6 +2,7 @@ backend/.venv/
 backend/site.db
 frontend/node_modules/
 frontend/dist/
+frontend/.git-backup/
 *.log
 *.pid
 __pycache__/
